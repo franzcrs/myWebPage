@@ -103,9 +103,39 @@ textarea {
     height: 100px;
     background-color: #f8f9fa;
     border-bottom: 0.5px solid #eaecef;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
 }
 
-.container1 {
+.navElem {
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    border-bottom: 2px solid #fc6f5c00;
+    font-weight: 400;
+    transition: font-weight .2s ease-in-out, border-bottom-color .2s ease-in-out;
+}
+
+.navElem:hover {
+    cursor: pointer;
+    border-bottom-color: #eaecef;
+}
+
+.textSpacer {
+    overflow: hidden;
+    height: 0px;
+    font-weight: 600;
+}
+
+.navElemSelected,
+.navElemSelected:hover {
+    border-bottom-color: #fc6f5c;
+    font-weight: 600;
+}
+
+.centeredContent {
+    width: 100%;
     max-width: 1280px;
     padding: 0 32px;
     margin: 0 auto;
@@ -114,24 +144,24 @@ textarea {
     align-items: stretch;
 }
 
-.container1>div {
+.centeredContent>div {
     box-sizing: content-box;
     padding: 0 16px;
 }
 
-.container1>div:first-child {
+.centeredContent>div:first-child {
     margin-left: -16px;
 }
 
-.container1>div:last-child {
+.centeredContent>div:last-child {
     margin-right: -16px;
 }
 
-.sideInfo {
+.sideCol {
     width: 25%;
 }
 
-.mainInfo {
+.mainCol {
     width: 75%;
 }
 
