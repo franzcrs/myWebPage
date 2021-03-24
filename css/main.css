@@ -99,7 +99,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-.navigation1 {
+:root {
+    --total-sections: 4;
+}
+
+.navBar {
     height: 100px;
     background-color: #f8f9fa;
     border-bottom: 0.5px solid #eaecef;
@@ -108,33 +112,8 @@ textarea {
     align-items: flex-end;
 }
 
-.navElem {
-    padding: 8px 16px;
-    text-align: center;
-    display: inline-block;
-    border-bottom: 2px solid #fc6f5c00;
-    font-weight: 400;
-    transition: font-weight .2s ease-in-out, border-bottom-color .2s ease-in-out;
-}
-
-.navElem:hover {
-    cursor: pointer;
-    border-bottom-color: #eaecef;
-}
-
-.textSpacer {
-    overflow: hidden;
-    height: 0px;
-    font-weight: 600;
-}
-
-.navElemSelected,
-.navElemSelected:hover {
-    border-bottom-color: #fc6f5c;
-    font-weight: 600;
-}
-
 .centeredContent {
+    box-sizing: border-box;
     width: 100%;
     max-width: 1280px;
     padding: 0 32px;
@@ -163,6 +142,32 @@ textarea {
 
 .mainCol {
     width: 75%;
+}
+
+.navElem {
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    border-bottom: 2px solid #fc6f5c00;
+    font-weight: 400;
+    transition: font-weight .2s ease-in-out, border-bottom-color .2s ease-in-out;
+}
+
+.navElem:hover {
+    cursor: pointer;
+    border-bottom-color: #eaecef;
+}
+
+.textSpacer {
+    overflow: hidden;
+    height: 0px;
+    font-weight: 600;
+}
+
+.navElemSelected,
+.navElemSelected:hover {
+    border-bottom-color: #fc6f5c;
+    font-weight: 600;
 }
 
 .squareShape {
@@ -206,8 +211,15 @@ h6 {
     margin: 0;
 }
 
+.sectionsGrid {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(var(--total-sections), 100%);
+}
+
 .section {
     padding: 30px 0 !important;
+    width: 100%;
 }
 
 .main-title h4 {
