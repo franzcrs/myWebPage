@@ -17,7 +17,8 @@
 
 html {
     background-color: #fff;
-    color: #43464a;
+    /* color: #43464a; */
+    color: #4c4f53;
     font-size: 1em;
     line-height: 1.4;
     font-family: 'Raleway', sans-serif;
@@ -99,6 +100,19 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    /* color: #43464ad6; */
+    color: #4c4f53d9;
+}
+
+p.last {
+    margin-bottom: 7%;
+}
+
 :root {
     --total-sections: 4;
 }
@@ -116,7 +130,8 @@ textarea {
     box-sizing: border-box;
     width: 100%;
     max-width: 1280px;
-    padding: 0 32px;
+    padding: 0 36px;
+    /*padding: 0 32px;*/
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -125,15 +140,18 @@ textarea {
 
 .centeredContent>div {
     box-sizing: content-box;
-    padding: 0 16px;
+    padding: 0 18px;
+    /*padding: 0 16px;*/
 }
 
 .centeredContent>div:first-child {
-    margin-left: -16px;
+    margin-left: -18px;
+    /*margin-left: -16px;*/
 }
 
 .centeredContent>div:last-child {
-    margin-right: -16px;
+    margin-right: -18px;
+    /*margin-right: -16px;*/
 }
 
 .sideCol {
@@ -180,7 +198,8 @@ textarea {
     background-image: url("../img1.jpg");
     background-position: center center;
     border-radius: 50%;
-    filter: contrast(90%) saturate(110%) sepia(5%);
+    /* filter: contrast(90%) saturate(110%) sepia(5%); */
+    filter: contrast(90%) saturate(110%) sepia(10%) brightness(1.01);
     background-size: auto;
 }
 
@@ -199,7 +218,8 @@ textarea {
 }
 
 .titleBlock {
-    padding: 10% 0;
+    /* margin: 10% 0; */
+    margin: 10% 0 9%;
 }
 
 h1,
@@ -218,22 +238,29 @@ h6 {
 }
 
 .section {
-    padding: 30px 0 !important;
+    /* padding: 30px 0; */
+    padding: 36px 0;
     width: 100%;
+}
+
+.main-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-title span {
+    color: #FC6F5C;
 }
 
 .main-title h4 {
     font-size: 45px;
-    text-transform: uppercase;
     margin-bottom: 5px;
     font-weight: 700;
 }
 
 .main-title h6 {
-    color: #0E1F37;
     font-size: 14px;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 2px;
     display: inline-block;
     padding: 0 15px;
@@ -258,22 +285,9 @@ h6 {
     right: -25px;
 }
 
-.main-title {
-    position: relative;
-    text-align: center;
-}
-
-.main-title span {
-    color: #FC6F5C;
-    font-weight: 700;
-}
-
 @media screen and (max-width: 768px) {
     .main-title h4 {
         font-size: 35px;
-        text-transform: uppercase;
-        margin-bottom: 5px;
-        font-weight: 700;
     }
     .main-title h6 {
         font-size: 12px;
@@ -281,15 +295,61 @@ h6 {
 }
 
 @media screen and (max-width: 414px) {
-    .main-title h4 {
-        font-size: 35px;
-    }
     .main-title h6:before {
         display: none;
     }
     .main-title h6:after {
         display: none;
     }
+}
+
+.subtitleBlock {
+    padding-bottom: 0px;
+}
+
+.boxesRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0px;
+}
+
+.boxesRow .box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 160px;
+    width: 30%;
+    padding: 18px;
+    text-align: left;
+    border: 0.5px solid #eaecef;
+    border-bottom: 2px solid #fc6f5c;
+}
+
+.boxesRow .box div {
+    height: 50%;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.material-icons.myIcon {
+    color: #4c4f53d9;
+}
+
+.material-icons.style1 {
+    font-size: 40px;
+    margin-left: -1px;
+}
+
+.material-icons.style2 {
+    font-size: 45px;
+    margin-left: -4px;
+    margin-top: -2.4px;
+}
+
+.material-icons.style3 {
+    font-size: 35px;
+    margin-top: 4px;
 }
 
 .main-timeline {
@@ -426,7 +486,6 @@ h6 {
     font-weight: 600;
     color: #fc6f5c;
     margin: 0 0 8px;
-    font-family: sans-serif;
     transition: all 0.3s ease 0s;
 }
 
@@ -448,6 +507,7 @@ h6 {
 
 .main-timeline .description {
     margin-top: 8px;
+    font-size: 1em;
 }
 
 .main-timeline .timeline:nth-child(2n),
